@@ -73,7 +73,7 @@ $(document).ready(function(){
       data: formData,
       method: "POST",
       success: function(data){
-        console.log(data)
+        // console.log(data)
         fetchTweets()
         // tweetList = data
         // parseTweets()
@@ -99,8 +99,7 @@ $(document).ready(function(){
     <div class='col-sm-9'>
       {% if not request.GET.q %}
         <div class=''>
-          {% include "tweets/form.html" with form=create_form action_url=create_url
-           btn_title='Tweet' form_id='tweet-form' %}
+          {% include "tweets/form.html" with form=create_form action_url=create_url btn_title='Tweet' form_id='tweet-form' %}
         </div>
         <hr/>
       {% endif %}
