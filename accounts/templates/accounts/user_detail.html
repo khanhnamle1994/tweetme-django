@@ -2,9 +2,13 @@
 
 {% block content %}
 <div class='row'>
-  <div class='col-sm-3 col-xs-12' style='background-color:red;'>
+  <div class='col-sm-3 col-xs-12'>
     <h1>{{ object.username }}</h1>
+    <hr/>
     <p>Followers: {{ object.followed_by.all.count }}</p>
+    <p>
+      <a href='btn btn-link' href='{% url "profiles:follow" username=object.username %}'>Follow</a>
+    </p>
   </div>
 
   <div class='col-sm-9 col-xs-12'>
