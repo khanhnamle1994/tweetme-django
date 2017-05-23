@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_form',
     'accounts',
     'tweets',
+    'hashtags',
     'rest_framework'
 ]
 
