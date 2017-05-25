@@ -9,13 +9,24 @@ from tweets.models import Tweet
 from .pagination import StandardResultsPagination
 from .serializers import TweetModelSerializer
 
+class LikeToggleAPIView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, pk, format=None):
+        tweet_qs = Tweet.objects.filter(pk=pk)
+        message = "Not allowed"
+        if request.user.is_authenticated():
+            is_liked = Tweet.objects.like_toggle(request.user, tweet_qs.first())
+            return Response({'liked': is_liked})
+        return Response({"message": message}, status=400)
+
 class RetweetAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, pk, format=None):
         tweet_qs = Tweet.objects.filter(pk=pk)
         message = "Not allowed"
-        if tweet_qs.exists() && tweet_qs.count() == 1:
+        if tweet_qs.exists() & tweet_qs.count() == 1:
             # if request.user.is_authenticated():
             new_tweet = Tweet.objects.retweet(request.user, tweet_qs.first())
             if new_tweet is not None:
@@ -40,7 +51,7 @@ class TweetListAPIView(generics.ListAPIView):
         if requested_user:
             qs = Tweet.objects.filter(user__username=requested_user).order_by("-timestamp")
         else:
-            im_following = self.request.user.profile.get_following()
+            im_following = self.request.user.profiles.get_following()
             qs1 = Tweet.objects.filter(user__in=im_following)
             qs2 = Tweet.objects.filter(user=self.request.user)
             qs = (qs1 | qs2).distinct().order_by("-timestamp")
