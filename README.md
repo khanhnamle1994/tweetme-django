@@ -1,51 +1,25 @@
+![Tweetme Logo](tweetme.png)
+
+# TweetMe
+
 Social media has changed the way we communicate with each other. The power behind social media allows us to do amazing things together. What exactly is behind it? Well.. it's Simple Web Application concepts that can be applied to ALL and ANY web applications that you may build.
 
-In this course we're going to teach you what's behind how Twitter works. Now, Twitter has hundreds of developers so what we're actually building is the basis of what Twitter once was, the absolute most simple things by learning more Django along the way. 
+Live course [here](https://kirr.co/2rhxyn)
 
-What are we going to learn:
+In this course I learned what's behind how Twitter works. Now, Twitter has hundreds of developers so what I built is the basis of what Twitter once was, the absolute most simple things by learning more Django along the way.
 
-* Ajax + jQuery to "Tweet" messages
+What have I accomplished from this course?
 
-* Tag users directly (@user)
+* Built a real service like Twitter.com
 
-* Use Hashtags (#newtag)
+* Got a deeper understanding of Django
 
-* Integrate Bootstrap
+* Built projects that rely on an API using the Django Rest Framework
 
-* Using an Ajax form within a Bootstrap Modal
+* Worked with AJAX and jQuery
 
-* Django Rest Framework
+* Auto-generated hashtags and hashtag filter (#yourtag)
 
-* Follow users (via Ajax)
+* Built projects using Django 1.10
 
-* Like posts (via Ajax)
-
-* Retweet posts (via Ajax)
-
-* Class Based Views
-
-* Custom Template Tags
-
-* Counting characters in a form
-
-* Basic Registration
-
-* And much more!
-
-We do everything step-by-step so even if you're an absolute beginner, you can follow along. Cheers!
-
-What am I going to get from this course?
-
-* Build a real service like Twitter.com
-
-* A deeper understanding of Django
-
-* Build projects that rely on an API using the Django Rest Framework
-
-* Working with AJAX and jQuery
-
-* Auto-generate hashtags and hashtag filter (#yourtag)
-
-* Build projects using Django 1.10
-
-* Integrate Bootstrap (getbootstrap.com) as a front end framework
+* Integrated Bootstrap (getbootstrap.com) as a front end framework
